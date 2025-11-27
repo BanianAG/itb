@@ -1,0 +1,8 @@
+.env
+pb_data/*
+output/**/*.sql
+output/**/*.json
+output/templates/*
+**/__pycache__/
+
+!.gitkeep

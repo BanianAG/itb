@@ -1,0 +1,31 @@
+services:
+  itb-frontend:
+    image: ${REGISTRY:-banianch}/itb:${FRONTEND_TAG:-latest}
+    environment:
+      - API_URL=${API_URL:-http://localhost}
+      - API_PORT=${API_PORT:-8000}
+      - BACKEND_URL=${BACKEND_URL:-http://localhost}
+      - BACKEND_PORT=${BACKEND_PORT:-8000}           
+    volumes:
+      - ./output/frontend:/app/data
+      - ./pb_data:/app/pb/pb_data
+    ports:
+      - "${PORT}:8090"
+  itb-api:
+    image: ${REGISTRY:-banianch}/itb-api:${API_TAG:-latest}
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --proxy-headers --forwarded-allow-ips=* --reload --reload-dir /app --log-level debug
+    volumes:
+      - ./output:/app/output
+      - ./api/template_engine:/app/packages/template_engine
+    environment:
+      - FRONTEND_URL=${FRONTEND_URL:-http://localhost}
+      - FRONTEND_PORT=${PORT:-8090}
+      - API_JSON_OUTPUT_PATH=${API_JSON_OUTPUT_PATH:-output/json}
+      - API_JSON_FILENAME=${API_JSON_FILENAME:-data_modeler_structure.json}
+      - API_TEMPLATE_OUTPUT_PATH=${API_TEMPLATE_OUTPUT_PATH:-output/templates}
+    ports:
+      - "${API_PORT:-8000}:8000"
+  
+networks:
+  default:
+    name: itb
