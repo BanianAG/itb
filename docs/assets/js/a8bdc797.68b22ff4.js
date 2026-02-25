@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkinformationtoolbench=globalThis.webpackChunkinformationtoolbench||[]).push([[3504],{6828(o){o.exports=JSON.parse('{"blogBasePath":"/docs/changelog","blogTitle":"Blog","authorsListPath":"/docs/changelog/authors"}')}}]);

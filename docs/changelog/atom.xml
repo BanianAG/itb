@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://itb.banian.ch/docs/changelog</id>
+    <title>Information Toolbench by Banian Blog</title>
+    <updated>2026-02-25T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://itb.banian.ch/docs/changelog"/>
+    <subtitle>Information Toolbench by Banian Blog</subtitle>
+    <icon>https://itb.banian.ch/docs/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[ITB 0.0.7]]></title>
+        <id>https://itb.banian.ch/docs/changelog/itb-0.0.7</id>
+        <link href="https://itb.banian.ch/docs/changelog/itb-0.0.7"/>
+        <updated>2026-02-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We're thrilled to announce the release of ITB 0.0.7, a comprehensive update combining enhanced WebApp capabilities with advanced API functionality.]]></summary>
+        <content type="html"><![CDATA[<p>We're thrilled to announce the release of <strong>ITB 0.0.7</strong>, a comprehensive update combining enhanced WebApp capabilities with advanced API functionality.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-release-overview">📦 Release Overview<a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#-release-overview" class="hash-link" aria-label="Direct link to 📦 Release Overview" title="Direct link to 📦 Release Overview" translate="no">​</a></h2>
+<p>This release bundles improvements across components and infrastructure:</p>
+<table><thead><tr><th>Component</th><th>Version</th><th>Focus</th></tr></thead><tbody><tr><td><strong>WebApp</strong></td><td>0.0.7</td><td>10 UI/Model features + 1 bug fix</td></tr><tr><td><strong>API</strong></td><td>0.0.7</td><td>Metadata tracking &amp; version tracking</td></tr><tr><td><strong>Infrastructure</strong></td><td>0.0.7</td><td>Traefik load balancer + integrated docs container</td></tr></tbody></table>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-webapp-007">🎯 WebApp 0.0.7<a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#-webapp-007" class="hash-link" aria-label="Direct link to 🎯 WebApp 0.0.7" title="Direct link to 🎯 WebApp 0.0.7" translate="no">​</a></h2>
+<p><strong>8 UI Features &amp; 2 Model Improvements</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="highlights">Highlights<a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#highlights" class="hash-link" aria-label="Direct link to Highlights" title="Direct link to Highlights" translate="no">​</a></h3>
+<ul>
+<li class="">✨ <strong>Model Filter by Entity Type</strong> - Focus on relevant entity types</li>
+<li class="">✨ <strong>Add Entity to Canvas Center</strong> - Improved entity placement</li>
+<li class="">✨ <strong>Entity Usage Indicators</strong> - See where entities are used across viewpoints</li>
+<li class="">✨ <strong>Edge Highlighting</strong> - Trace relationships at a glance</li>
+<li class="">✨ <strong>Attribute Drawer</strong> - CTRL+4 for quick attribute access</li>
+<li class="">✨ <strong>Save Canvas as Image</strong> - Export documentation</li>
+<li class="">✨ <strong>Auto Arrange Canvas</strong> - Optimize layout automatically</li>
+<li class="">✨ <strong>Resizable Left Sidebar</strong> - Flexible workspace</li>
+<li class="">🎁 <strong>Mandatory Attribute Field</strong> - Better data modeling</li>
+<li class="">🐞 <strong>Fixed Edge Routing</strong> - Proper visualization on collapse</li>
+</ul>
+<p>→ <a class="" href="https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.7">View WebApp 0.0.7 Release Details</a></p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-api-007">🚀 API 0.0.7<a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#-api-007" class="hash-link" aria-label="Direct link to 🚀 API 0.0.7" title="Direct link to 🚀 API 0.0.7" translate="no">​</a></h2>
+<p><strong>Enhanced Traceability &amp; Version Tracking</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="highlights-1">Highlights<a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#highlights-1" class="hash-link" aria-label="Direct link to Highlights" title="Direct link to Highlights" translate="no">​</a></h3>
+<ul>
+<li class="">📋 <strong>Metadata Export File</strong> - Automatic <code>_metadata.json</code> with version info and statistics</li>
+<li class="">🔍 <strong><code>/pb_info</code> Endpoint</strong> - Query PocketBase version information</li>
+</ul>
+<p><strong>What's tracked:</strong></p>
+<ul>
+<li class="">ITB frontend, API, and library versions</li>
+<li class="">Export timestamp</li>
+<li class="">Entity, relation, viewpoint, and node counts</li>
+</ul>
+<p>→ <a class="" href="https://itb.banian.ch/docs/changelog-api/api-0.0.7">View API 0.0.7 Release Details</a></p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-summary">🎓 Summary<a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#-summary" class="hash-link" aria-label="Direct link to 🎓 Summary" title="Direct link to 🎓 Summary" translate="no">​</a></h2>
+<p>ITB 0.0.7 represents a significant milestone with improved usability, better model traceability, and enhanced data quality practices. The WebApp gains powerful productivity tools while the API adds comprehensive version tracking for compliance and diagnostics.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-major-changes--migration-guide">⚠️ Major Changes &amp; Migration Guide<a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#%EF%B8%8F-major-changes--migration-guide" class="hash-link" aria-label="Direct link to ⚠️ Major Changes &amp; Migration Guide" title="Direct link to ⚠️ Major Changes &amp; Migration Guide" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-environment-configuration-changes">🔄 Environment Configuration Changes<a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#-environment-configuration-changes" class="hash-link" aria-label="Direct link to 🔄 Environment Configuration Changes" title="Direct link to 🔄 Environment Configuration Changes" translate="no">​</a></h3>
+<p>The <code>.env</code> file has been updated with new configuration options. <strong>Action Required:</strong></p>
+<ol>
+<li class="">
+<p><strong>Backup your current <code>.env</code> file:</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">cp .env .env.backup</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>Update to the new <code>.env</code> template:</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">cp .env.example .env</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>Re-apply your custom settings</strong> from the backup file to the new <code>.env</code></p>
+</li>
+</ol>
+<p><strong>Key changes:</strong></p>
+<ul>
+<li class="">New Traefik load balancer configuration variables</li>
+<li class="">Updated image tags for version 0.0.7</li>
+<li class="">New documentation container settings</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-architecture-updates">🏗️ Architecture Updates<a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#%EF%B8%8F-architecture-updates" class="hash-link" aria-label="Direct link to 🏗️ Architecture Updates" title="Direct link to 🏗️ Architecture Updates" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-traefik-load-balancer-new">1. <strong>Traefik Load Balancer (NEW)</strong><a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#1-traefik-load-balancer-new" class="hash-link" aria-label="Direct link to 1-traefik-load-balancer-new" title="Direct link to 1-traefik-load-balancer-new" translate="no">​</a></h4>
+<p>This release introduces <strong>Traefik</strong> as a local load balancer, providing a cleaner URL structure for development:</p>
+<p><strong>Local Access URLs:</strong></p>
+<ul>
+<li class=""><strong>WebApp:</strong> <code>http://itb.localhost</code> (instead of port-based URLs)</li>
+<li class=""><strong>API:</strong> <code>http://api.itb.localhost</code> (instead of port-based URLs)</li>
+<li class=""><strong>Traefik Dashboard:</strong> <code>http://traefik.localhost:8080</code> (optional monitoring)</li>
+</ul>
+<p><strong>Why this helps:</strong></p>
+<ul>
+<li class="">Simplified development URLs</li>
+<li class="">Closer alignment with production architecture</li>
+<li class="">No need to remember port numbers</li>
+<li class="">Supports multiple projects running simultaneously</li>
+</ul>
+<p><strong>Setup:</strong>
+Your <code>/etc/hosts</code> file should include (already configured if using provided docker-compose):</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">127.0.0.1 itb.localhost</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">127.0.0.1 api.itb.localhost</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">127.0.0.1 traefik.localhost</span><br></span></code></pre></div></div>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-integrated-documentation-container-new">2. <strong>Integrated Documentation Container (NEW)</strong><a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#2-integrated-documentation-container-new" class="hash-link" aria-label="Direct link to 2-integrated-documentation-container-new" title="Direct link to 2-integrated-documentation-container-new" translate="no">​</a></h4>
+<p>The ITB documentation is now packaged as an integrated container service running <strong>busybox with httpd</strong> webserver:</p>
+<p><strong>Access Documentation:</strong></p>
+<ul>
+<li class="">Access directly: <code>http://itb.localhost/docs</code></li>
+<li class="">Documentation is fully functional without external network calls</li>
+</ul>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li class="">Documentation always matches your deployed version</li>
+<li class="">Offline-friendly within your local/internal network</li>
+<li class="">No external dependencies</li>
+<li class="">Consistent documentation across teams</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-update-instructions">📋 Update Instructions<a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#-update-instructions" class="hash-link" aria-label="Direct link to 📋 Update Instructions" title="Direct link to 📋 Update Instructions" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="for-existing-users">For Existing Users<a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#for-existing-users" class="hash-link" aria-label="Direct link to For Existing Users" title="Direct link to For Existing Users" translate="no">​</a></h3>
+<p>Follow these steps to upgrade to ITB 0.0.7:</p>
+<ol>
+<li class="">
+<p><strong>Backup your data:</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># Backup the current model</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">save remote in the WebApp to export the Model to JSON</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Backup your Output / JSON Folder</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>Update your environment:</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># Stop current instance</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">docker compose down</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Pull latest itb version from GitHub</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">git pull</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Backup and update .env</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">cp .env .env.backup</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">cp .env.example .env</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Re-apply your custom settings</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>Pull latest images and start:</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">docker compose pull</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">docker compose up -d</span><br></span></code></pre></div></div>
+</li>
+<li class="">
+<p><strong>Verify the installation:</strong></p>
+<ul>
+<li class="">WebApp: <code>http://itb.localhost</code></li>
+<li class="">API: <code>http://api.itb.localhost</code></li>
+<li class="">Docs: <code>http://itb.localhost/docs</code></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-troubleshooting">🔧 Troubleshooting<a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#-troubleshooting" class="hash-link" aria-label="Direct link to 🔧 Troubleshooting" title="Direct link to 🔧 Troubleshooting" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="issue-containers-not-starting-or-old-configuration-persists">Issue: Containers not starting or old configuration persists<a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#issue-containers-not-starting-or-old-configuration-persists" class="hash-link" aria-label="Direct link to Issue: Containers not starting or old configuration persists" title="Direct link to Issue: Containers not starting or old configuration persists" translate="no">​</a></h3>
+<p>If you encounter issues after upgrading, try the following steps to perform a clean start:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="option-1-clean-restart-recommended">Option 1: Clean Restart (Recommended)<a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#option-1-clean-restart-recommended" class="hash-link" aria-label="Direct link to Option 1: Clean Restart (Recommended)" title="Direct link to Option 1: Clean Restart (Recommended)" translate="no">​</a></h4>
+<p><strong>Stop and remove all containers:</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># Stop all running containers</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">docker compose down</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Verify no ITB containers are running</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">docker ps | grep itb</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># (should return no results)</span><br></span></code></pre></div></div>
+<p><strong>Remove the PocketBase data volume (⚠️ This will reset your database):</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># List volumes to find pb_data</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">docker volume ls | grep pb_data</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Remove the volume</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">docker volume rm itb_pb_data</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># (or adjust the name based on your project folder name)</span><br></span></code></pre></div></div>
+<p><strong>Start fresh:</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">docker compose up -d</span><br></span></code></pre></div></div>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="option-2-if-you-need-to-preserve-your-data">Option 2: If you need to preserve your data<a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#option-2-if-you-need-to-preserve-your-data" class="hash-link" aria-label="Direct link to Option 2: If you need to preserve your data" title="Direct link to Option 2: If you need to preserve your data" translate="no">​</a></h4>
+<p><strong>Stop containers but keep volume:</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">docker compose down</span><br></span></code></pre></div></div>
+<p><strong>Then restart with the existing data:</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">docker compose up -d</span><br></span></code></pre></div></div>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-issues--solutions">Common Issues &amp; Solutions<a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#common-issues--solutions" class="hash-link" aria-label="Direct link to Common Issues &amp; Solutions" title="Direct link to Common Issues &amp; Solutions" translate="no">​</a></h4>
+<table><thead><tr><th>Issue</th><th>Solution</th></tr></thead><tbody><tr><td><strong>Traefik routes not working</strong></td><td>Ensure <code>/etc/hosts</code> has <code>127.0.0.1 itb.localhost api.itb.localhost</code> entries</td></tr><tr><td><strong>Port already in use</strong></td><td>Run <code>docker ps</code> to check conflicts and stop conflicting containers</td></tr><tr><td><strong>Documentation not loading</strong></td><td>Verify docs container is running: <code>docker ps | grep docs</code></td></tr><tr><td><strong>API not responding</strong></td><td>Check logs: <code>docker compose logs api</code></td></tr><tr><td><strong>Can't access PocketBase UI</strong></td><td>Default URL is <code>http://localhost:8090/_</code> (note: uses localhost, not traefik hostname)</td></tr></tbody></table>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="full-reset-last-resort">Full Reset (Last Resort)<a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#full-reset-last-resort" class="hash-link" aria-label="Direct link to Full Reset (Last Resort)" title="Direct link to Full Reset (Last Resort)" translate="no">​</a></h4>
+<p>If issues persist, perform a complete reset:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># Stop everything</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">docker compose down</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Remove all ITB-related containers</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">docker ps -a | grep itb | awk '{print $1}' | xargs docker rm -f</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Remove volume</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">docker volume rm itb_pb_data</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Clean up any dangling images (optional)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">docker image prune -a</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Start fresh</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">docker compose up -d</span><br></span></code></pre></div></div>
+<blockquote>
+<p><strong>⚠️ Warning:</strong> This will permanently delete your PocketBase data. Make sure you've exported your models first!</p>
+</blockquote>
+<hr>
+<p><strong>Thank you to all contributors and users who made this release possible!</strong></p>]]></content>
+    </entry>
+</feed>

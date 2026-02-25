@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Information Toolbench by Banian Blog</title>
+        <link>https://itb.banian.ch/docs/changelog-api</link>
+        <description>Information Toolbench by Banian Blog</description>
+        <lastBuildDate>Wed, 25 Feb 2026 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[0.0.7 (API)]]></title>
+            <link>https://itb.banian.ch/docs/changelog-api/api-0.0.7</link>
+            <guid>https://itb.banian.ch/docs/changelog-api/api-0.0.7</guid>
+            <pubDate>Wed, 25 Feb 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Version 0.0.7 of the ITB API introduces enhanced traceability and version tracking capabilities for model exports.]]></description>
+            <content:encoded><![CDATA[<p>Version 0.0.7 of the ITB API introduces enhanced traceability and version tracking capabilities for model exports.</p>
+<blockquote>
+<p><strong>Part of ITB 0.0.7 release</strong> - See <a class="" href="https://itb.banian.ch/docs/changelog/itb-0.0.7">master release</a> and <a class="" href="https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.7">WebApp Details</a></p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-new-features">✨ New Features<a href="https://itb.banian.ch/docs/changelog-api/api-0.0.7#-new-features" class="hash-link" aria-label="Direct link to ✨ New Features" title="Direct link to ✨ New Features" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="metadata-export-file">Metadata Export File<a href="https://itb.banian.ch/docs/changelog-api/api-0.0.7#metadata-export-file" class="hash-link" aria-label="Direct link to Metadata Export File" title="Direct link to Metadata Export File" translate="no">​</a></h3>
+<p>Model exports now automatically include a <code>_metadata.json</code> file that captures comprehensive version information and statistics about the exported model.</p>
+<p><strong>What's included:</strong></p>
+<ul>
+<li class=""><strong>Version information:</strong> ITB frontend, API, and library versions</li>
+<li class=""><strong>Export timestamp:</strong> When the model was exported</li>
+<li class=""><strong>Statistics:</strong> Entity, relation, viewpoint, and node counts</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-api-endpoint-pb_info">New API Endpoint: <code>/pb_info</code><a href="https://itb.banian.ch/docs/changelog-api/api-0.0.7#new-api-endpoint-pb_info" class="hash-link" aria-label="Direct link to new-api-endpoint-pb_info" title="Direct link to new-api-endpoint-pb_info" translate="no">​</a></h3>
+<p>A new endpoint has been added to retrieve version information from PocketBase (ITB Frontend):</p>
+<ul>
+<li class=""><strong>Method:</strong> GET</li>
+<li class=""><strong>Path:</strong> <code>/pb_info</code></li>
+<li class=""><strong>Returns:</strong> JSON with current version information</li>
+</ul>
+<p>This endpoint calls the PocketBase <code>/getVersion</code> hook to retrieve the current version of the ITB frontend.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="example-metadata-file">Example Metadata File<a href="https://itb.banian.ch/docs/changelog-api/api-0.0.7#example-metadata-file" class="hash-link" aria-label="Direct link to Example Metadata File" title="Direct link to Example Metadata File" translate="no">​</a></h3>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"itb_version"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"0.0.7"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"api_version"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"0.0.7"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"banian_library_version"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"0.5.2"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"last_updated"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"2026-02-12 14:30:45"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"entity_count"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">42</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"relation_count"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">156</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"viewpoint_count"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">8</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"node_count"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">234</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="benefits">Benefits<a href="https://itb.banian.ch/docs/changelog-api/api-0.0.7#benefits" class="hash-link" aria-label="Direct link to Benefits" title="Direct link to Benefits" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Version tracking:</strong> Know exactly which tool versions created each export</li>
+<li class=""><strong>Debugging:</strong> Quickly identify version mismatches when troubleshooting issues</li>
+<li class=""><strong>Auditing:</strong> Track when models were last updated</li>
+<li class=""><strong>Statistics:</strong> Get a quick overview of model complexity</li>
+<li class=""><strong>Automation:</strong> Parse metadata programmatically for CI/CD pipelines</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="summary">Summary<a href="https://itb.banian.ch/docs/changelog-api/api-0.0.7#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary" translate="no">​</a></h2>
+<p>This release enhances data model traceability by automatically capturing version information and statistics in every export. The new metadata file makes it easy to understand the context of any model export and supports better debugging and automation workflows.</p>]]></content:encoded>
+            <category>API</category>
+        </item>
+    </channel>
+</rss>

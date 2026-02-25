@@ -21,7 +21,14 @@ docker login
 docker compose up -d
 ```
 
-Visit the platform in your browser [http://localhost:8090](http://localhost:8090) (default port via `.env`).
+**Access ITB in your browser:**
+
+- **WebApp:** [http://itb.localhost](http://itb.localhost)
+- **API:** [http://api.itb.localhost](http://api.itb.localhost)  
+- **Documentation:** [http://itb.localhost/docs](http://itb.localhost/docs)
+- **Backend (PocketBase):** [http://itb.localhost/_](http://itb.localhost/_)
+
+> **Default credentials:** admin@admin.com / admin12345
 
 ---
 
@@ -54,10 +61,10 @@ Full documentation and guides are available here:
 
 ```
 /api          – Template Engine
+/docs         – Documentation (Static)
 /output       – Folder for generate metadata
   /json       - Metamodel Structure to import/export
   /templates  - Generate output by the template engine
-/pb_data      – Pocketbase SQLite Database
 ```
 
 ---

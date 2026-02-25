@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkinformationtoolbench=globalThis.webpackChunkinformationtoolbench||[]).push([[4712],{8185(e){e.exports=JSON.parse('{"title":"API Releases","items":[{"title":"0.0.7 (API)","permalink":"/docs/changelog-api/api-0.0.7","unlisted":false,"date":"2026-02-25T00:00:00.000Z"}]}')}}]);

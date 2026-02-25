@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Information Toolbench by Banian Blog</title>
+        <link>https://itb.banian.ch/docs/changelog-webapp</link>
+        <description>Information Toolbench by Banian Blog</description>
+        <lastBuildDate>Wed, 25 Feb 2026 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[0.0.7 (WebApp)]]></title>
+            <link>https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.7</link>
+            <guid>https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.7</guid>
+            <pubDate>Wed, 25 Feb 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[We're excited to announce version 0.0.7 of the ITB WebApp (Information Technology Blueprint), bringing significant improvements to the user interface and data model capabilities. This release includes 10 new features and 1 important bug fix.]]></description>
+            <content:encoded><![CDATA[<p>We're excited to announce version 0.0.7 of the ITB WebApp (Information Technology Blueprint), bringing significant improvements to the user interface and data model capabilities. This release includes 10 new features and 1 important bug fix.</p>
+<blockquote>
+<p><strong>Part of ITB 0.0.7 release</strong> - See <a class="" href="https://itb.banian.ch/docs/changelog/itb-0.0.7">master release</a> and <a class="" href="https://itb.banian.ch/docs/changelog-api/api-0.0.7">API Details</a></p>
+</blockquote>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-new-features">✨ New Features<a href="https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.7#-new-features" class="hash-link" aria-label="Direct link to ✨ New Features" title="Direct link to ✨ New Features" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ui-enhancements">UI Enhancements<a href="https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.7#ui-enhancements" class="hash-link" aria-label="Direct link to UI Enhancements" title="Direct link to UI Enhancements" translate="no">​</a></h3>
+<p>This release brings substantial improvements to the user experience with 8 new UI features:</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-model-filter-for-entity-type">1. Model Filter for Entity Type<a href="https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.7#1-model-filter-for-entity-type" class="hash-link" aria-label="Direct link to 1. Model Filter for Entity Type" title="Direct link to 1. Model Filter for Entity Type" translate="no">​</a></h4>
+<p>Filter viewpoint displays by entity type to reduce visual complexity. A new funnel button in the model canvas toolbar allows you to toggle visibility of entity types, helping you focus on what matters most.</p>
+<p><strong>Key Benefits:</strong></p>
+<ul>
+<li class="">Improved readability of complex models</li>
+<li class="">Focus on relevant entity types</li>
+<li class="">Quick toggle on/off for each type</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Model Filter for Entity Type" src="https://itb.banian.ch/docs/assets/images/ui-001-new_model-filter-entity-type_001-2ad9a2fc6938bfed69d1f3ca9d3141e1.png" width="457" height="715" class="img_ev3q"></p>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="3-add-entity-to-center-of-canvas">3. Add Entity to Center of Canvas<a href="https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.7#3-add-entity-to-center-of-canvas" class="hash-link" aria-label="Direct link to 3. Add Entity to Center of Canvas" title="Direct link to 3. Add Entity to Center of Canvas" translate="no">​</a></h4>
+<p>Entities are now added to the center of the visible canvas area rather than at a fixed position, providing a more intuitive editing experience.</p>
+<p><img decoding="async" loading="lazy" alt="Add Entity to Center of Canvas" src="https://itb.banian.ch/docs/assets/images/ui-003-new_add-entity-to-center-of-canvas_001-2a6479a5c48f60424aaa2eae8eb2b677.png" width="1220" height="1102" class="img_ev3q"></p>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-entity-usage-indicator-across-viewpoints">4. Entity Usage Indicator Across Viewpoints<a href="https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.7#4-entity-usage-indicator-across-viewpoints" class="hash-link" aria-label="Direct link to 4. Entity Usage Indicator Across Viewpoints" title="Direct link to 4. Entity Usage Indicator Across Viewpoints" translate="no">​</a></h4>
+<p>New visual indicator shows where entities are used across different viewpoints, making it easier to understand entity relationships and dependencies throughout your model.</p>
+<p><img decoding="async" loading="lazy" alt="Entity Usage Indicator" src="https://itb.banian.ch/docs/assets/images/ui-004-new_usage-of-enitity-in-viewpoints-indicator_001-830b301c2e88a9c04e372e1892df50cb.png" width="679" height="276" class="img_ev3q"></p>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="5-edge-highlighting-for-selected-entity">5. Edge Highlighting for Selected Entity<a href="https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.7#5-edge-highlighting-for-selected-entity" class="hash-link" aria-label="Direct link to 5. Edge Highlighting for Selected Entity" title="Direct link to 5. Edge Highlighting for Selected Entity" translate="no">​</a></h4>
+<p>When selecting an entity, all connected edges are now highlighted, making it easier to trace relationships and understand connections at a glance.</p>
+<p><img decoding="async" loading="lazy" alt="Edge Highlighting for Selected Entity" src="https://itb.banian.ch/docs/assets/images/ui-005-new_edge-highlighting-for-selected-entity_001-f650a6e552b14717883a34227fa1790c.png" width="1132" height="189" class="img_ev3q">
+<img decoding="async" loading="lazy" alt="Edge Highlighting Example 2" src="https://itb.banian.ch/docs/assets/images/ui-005-new_edge-highlighting-for-selected-entity_002-cb1509179096444d0b82f187585de603.png" width="1149" height="179" class="img_ev3q"></p>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="6-attribute-drawer-with-pagination">6. Attribute Drawer with Pagination<a href="https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.7#6-attribute-drawer-with-pagination" class="hash-link" aria-label="Direct link to 6. Attribute Drawer with Pagination" title="Direct link to 6. Attribute Drawer with Pagination" translate="no">​</a></h4>
+<p>The drawer concept has been extended to attributes, now accessible via <strong>CTRL+4</strong>. All drawers (viewpoints, entities, relations, and attributes) are now paginated, significantly improving performance in large models.</p>
+<p><strong>Available Shortcuts:</strong></p>
+<ul>
+<li class=""><strong>CTRL+1</strong> - Viewpoints</li>
+<li class=""><strong>CTRL+2</strong> - Entities</li>
+<li class=""><strong>CTRL+3</strong> - Relations</li>
+<li class=""><strong>CTRL+4</strong> - Attributes (New!)</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Attribute Drawer" src="https://itb.banian.ch/docs/assets/images/ui-006-new_attribute-drawer_001-e60aaf380795c8e5f80987e415cb217a.png" width="2822" height="767" class="img_ev3q"></p>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="7-save-canvas-as-image">7. Save Canvas as Image<a href="https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.7#7-save-canvas-as-image" class="hash-link" aria-label="Direct link to 7. Save Canvas as Image" title="Direct link to 7. Save Canvas as Image" translate="no">​</a></h4>
+<p>Export your viewpoint canvas as a high-quality image for documentation, presentations, or sharing with stakeholders.</p>
+<p><img decoding="async" loading="lazy" alt="Save Canvas as Image" src="https://itb.banian.ch/docs/assets/images/ui-007-new_save-canvas-as-image_001-acb6453bdaf711cfb7addf0e0f190186.png" width="318" height="226" class="img_ev3q"></p>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="8-auto-arrange-canvas">8. Auto Arrange Canvas<a href="https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.7#8-auto-arrange-canvas" class="hash-link" aria-label="Direct link to 8. Auto Arrange Canvas" title="Direct link to 8. Auto Arrange Canvas" translate="no">​</a></h4>
+<p>Automatically arrange entities in your viewpoint for optimal layout. A layout algorithm now helps organize complex models with minimal manual effort.</p>
+<p><img decoding="async" loading="lazy" alt="Auto Arrange Canvas" src="https://itb.banian.ch/docs/assets/images/ui-008-new_auto-arrange-canvas_001-568aab2c8f3e09ac77efb0a79be24d10.png" width="352" height="387" class="img_ev3q"></p>
+<hr>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="9-resizable-left-sidebar">9. Resizable Left Sidebar<a href="https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.7#9-resizable-left-sidebar" class="hash-link" aria-label="Direct link to 9. Resizable Left Sidebar" title="Direct link to 9. Resizable Left Sidebar" translate="no">​</a></h4>
+<p>The left sidebar can now be resized to accommodate different screen sizes and user preferences, providing more flexibility in workspace organization.</p>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="model-improvements">Model Improvements<a href="https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.7#model-improvements" class="hash-link" aria-label="Direct link to Model Improvements" title="Direct link to Model Improvements" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="10-mandatory-attribute-field">10. Mandatory Attribute Field<a href="https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.7#10-mandatory-attribute-field" class="hash-link" aria-label="Direct link to 10. Mandatory Attribute Field" title="Direct link to 10. Mandatory Attribute Field" translate="no">​</a></h4>
+<p>Attributes can now be marked as mandatory using a new boolean field. This enhancement provides:</p>
+<ul>
+<li class="">Clear documentation of required fields</li>
+<li class="">Better data quality and validation rules</li>
+<li class="">Support for generating database schemas with NOT NULL constraints</li>
+<li class="">Backward compatibility (defaults to <code>false</code>)</li>
+</ul>
+<p><strong>Display Features:</strong></p>
+<ul>
+<li class="">Visual indicator <code>*</code> (asterisk) in table columns to mark mandatory fields</li>
+<li class="">Compact icon-based display saves screen space compared to text labels</li>
+<li class="">Consistent indicator across main canvas, entity attributes table, and sidebar panels</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"id"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"attr_123"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"name"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"customer_id"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"type"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"string"</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"mandatory"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean" style="color:#36acaa">true</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">"description"</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"Unique customer identifier"</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-bug-fixes">🐞 Bug Fixes<a href="https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.7#-bug-fixes" class="hash-link" aria-label="Direct link to 🐞 Bug Fixes" title="Direct link to 🐞 Bug Fixes" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-model-edge-routing-on-collapse">2. Model Edge Routing on Collapse<a href="https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.7#2-model-edge-routing-on-collapse" class="hash-link" aria-label="Direct link to 2. Model Edge Routing on Collapse" title="Direct link to 2. Model Edge Routing on Collapse" translate="no">​</a></h3>
+<p>Fixed an issue where edge routing was not properly updated when collapsing entity nodes in the canvas, ensuring proper visual representation of relationships.</p>
+<p><img decoding="async" loading="lazy" alt="Model Edge Routing on Collapse Fix" src="https://itb.banian.ch/docs/assets/images/ui-002-fix_model-edge-routing-on-collapse_001-5bfa3c6c382af3f551089ace9cc92d4f.png" width="508" height="472" class="img_ev3q"></p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="summary">Summary<a href="https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.7#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary" translate="no">​</a></h2>
+<p>Version 0.0.7 represents a significant step forward in usability, performance, and data model capabilities. The UI improvements make working with large models more efficient, while the new mandatory field enhances data modeling best practices.</p>
+<p>Thank you to all contributors and users who provided feedback!</p>]]></content:encoded>
+            <category>ITB APP</category>
+            <category>UI</category>
+            <category>Model</category>
+        </item>
+    </channel>
+</rss>

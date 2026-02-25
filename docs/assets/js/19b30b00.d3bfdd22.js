@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkinformationtoolbench=globalThis.webpackChunkinformationtoolbench||[]).push([[2326],{5129(t){t.exports=JSON.parse('{"title":"All posts","items":[{"title":"ITB 0.0.7","permalink":"/docs/changelog/itb-0.0.7","unlisted":false,"date":"2026-02-25T00:00:00.000Z"}]}')}}]);

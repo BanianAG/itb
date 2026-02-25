@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkinformationtoolbench=globalThis.webpackChunkinformationtoolbench||[]).push([[7725],{1642(a){a.exports=JSON.parse('{"tags":[{"label":"API","permalink":"/docs/changelog-api/tags/api","description":"All changes related to the ITB API","count":1}]}')}}]);
