@@ -1,0 +1,43 @@
+http:
+  routers:
+    itb-frontend:
+      rule: "Host(`itb.localhost`)"
+      entryPoints:
+        - web
+      service: itb-frontend
+
+    itb-api:
+      rule: "Host(`api.itb.localhost`)"
+      entryPoints:
+        - web
+      service: itb-api
+
+    itb-docs:
+      rule: "Host(`itb.localhost`) && PathPrefix(`/docs`)"
+      entryPoints:
+        - web
+      middlewares:
+        - docs-strip
+      service: itb-docs
+
+  middlewares:
+    docs-strip:
+      stripPrefix:
+        prefixes:
+          - "/docs"
+
+  services:
+    itb-frontend:
+      loadBalancer:
+        servers:
+          - url: "http://itb-frontend"
+
+    itb-api:
+      loadBalancer:
+        servers:
+          - url: "http://itb-api:8000"
+
+    itb-docs:
+      loadBalancer:
+        servers:
+          - url: "http://itb-docs"

@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkinformationtoolbench=globalThis.webpackChunkinformationtoolbench||[]).push([[322],{3095(o){o.exports=JSON.parse('{"metadata":{"permalink":"/docs/changelog-webapp","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

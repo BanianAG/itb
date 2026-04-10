@@ -2,11 +2,81 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://itb.banian.ch/docs/changelog</id>
     <title>Information Toolbench by Banian Blog</title>
-    <updated>2026-02-25T00:00:00.000Z</updated>
+    <updated>2026-04-10T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://itb.banian.ch/docs/changelog"/>
     <subtitle>Information Toolbench by Banian Blog</subtitle>
     <icon>https://itb.banian.ch/docs/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[ITB 0.0.8]]></title>
+        <id>https://itb.banian.ch/docs/changelog/itb-0.0.8</id>
+        <link href="https://itb.banian.ch/docs/changelog/itb-0.0.8"/>
+        <updated>2026-04-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This release of ITB 0.0.8 focuses on practical workflow improvements, broader customization options, and measurable performance gains for data modeling.]]></summary>
+        <content type="html"><![CDATA[<p>This release of <strong>ITB 0.0.8</strong> focuses on practical workflow improvements, broader customization options, and measurable performance gains for data modeling.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-release-overview">📦 Release Overview<a href="https://itb.banian.ch/docs/changelog/itb-0.0.8#-release-overview" class="hash-link" aria-label="Direct link to 📦 Release Overview" title="Direct link to 📦 Release Overview" translate="no">​</a></h2>
+<p>This release bundles significant improvements across components:</p>
+<table><thead><tr><th>Component</th><th>Version</th><th>Focus</th></tr></thead><tbody><tr><td><strong>WebApp</strong></td><td>0.0.8</td><td>7 UI/UX features + Performance optimization</td></tr><tr><td><strong>API</strong></td><td>0.0.8</td><td>No changes (only alignment with WebApp)</td></tr></tbody></table>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-webapp-008">🎯 WebApp 0.0.8<a href="https://itb.banian.ch/docs/changelog/itb-0.0.8#-webapp-008" class="hash-link" aria-label="Direct link to 🎯 WebApp 0.0.8" title="Direct link to 🎯 WebApp 0.0.8" translate="no">​</a></h2>
+<p><strong>7 UI/UX Features + Comprehensive Performance Optimization</strong></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="highlights">Highlights<a href="https://itb.banian.ch/docs/changelog/itb-0.0.8#highlights" class="hash-link" aria-label="Direct link to Highlights" title="Direct link to Highlights" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-advanced-workflows">🎯 Advanced Workflows<a href="https://itb.banian.ch/docs/changelog/itb-0.0.8#-advanced-workflows" class="hash-link" aria-label="Direct link to 🎯 Advanced Workflows" title="Direct link to 🎯 Advanced Workflows" translate="no">​</a></h4>
+<ul>
+<li class="">✨ <strong>Drag Entity from Sidebar to Canvas</strong> - Intuitive drag-and-drop entity placement</li>
+<li class="">✨ <strong>Drag &amp; Context Menu for Related Entities</strong> - Explore relationships without sidebar searching</li>
+<li class="">✨ <strong>Comprehensive Canvas Context Menus</strong> - Right-click actions for entities, edges, and canvas</li>
+<li class="">✨ <strong>User Settings Dialog</strong> - Centralized preferences for language, theme, canvas behavior, and grid</li>
+<li class="">✨ <strong>Generate All Artifacts Button</strong> - One-click artifact generation with progress tracking</li>
+<li class="">✨ <strong>Entity Tree Auto-Reveal</strong> - Canvas selection automatically reveals and scrolls to entity in sidebar</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-performance">⚡ Performance<a href="https://itb.banian.ch/docs/changelog/itb-0.0.8#-performance" class="hash-link" aria-label="Direct link to ⚡ Performance" title="Direct link to ⚡ Performance" translate="no">​</a></h4>
+<ul>
+<li class="">⚡ <strong>Canvas Rendering Performance Boost</strong> - 60%+ render time reduction for large viewpoints<!-- -->
+<ul>
+<li class="">Viewport culling: Only visible elements rendered</li>
+<li class="">Shared data maps for entity types and attributes</li>
+<li class="">Lazy edge labels (hidden below 50% zoom)</li>
+<li class="">Singleton dialogs: One instance for entire canvas</li>
+<li class="">Cached handle positions for edge routing</li>
+<li class="">Debounced viewpoint switching batched via requestAnimationFrame</li>
+<li class=""><strong>Result:</strong> Large 30-entity, 40-edge viewpoints now render in under 10 seconds (vs. ~25 seconds)</li>
+</ul>
+</li>
+</ul>
+<p>→ <a class="" href="https://itb.banian.ch/docs/changelog-webapp/webapp-0.0.8">View WebApp 0.0.8 Release Details</a></p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-summary">🎓 Summary<a href="https://itb.banian.ch/docs/changelog/itb-0.0.8#-summary" class="hash-link" aria-label="Direct link to 🎓 Summary" title="Direct link to 🎓 Summary" translate="no">​</a></h2>
+<p>ITB 0.0.8 is a focused update that improves day-to-day modeling workflows and responsiveness. The 7 UI features reduce interaction overhead, and the 60%+ rendering improvement makes larger viewpoints easier to work with in regular usage.</p>
+<p><strong>Key Achievements:</strong></p>
+<ul>
+<li class="">✅ Intuitive drag-and-drop workflows</li>
+<li class="">✅ Context-aware actions reduce clicks</li>
+<li class="">✅ Customizable workspace settings</li>
+<li class="">✅ 60%+ performance improvement</li>
+<li class="">✅ Large models now production-ready</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-upgrade-notes">⚠️ Upgrade Notes<a href="https://itb.banian.ch/docs/changelog/itb-0.0.8#%EF%B8%8F-upgrade-notes" class="hash-link" aria-label="Direct link to ⚠️ Upgrade Notes" title="Direct link to ⚠️ Upgrade Notes" translate="no">​</a></h2>
+<p>New Docker Compose File and new .env File! Please update.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="recommended-actions">Recommended Actions<a href="https://itb.banian.ch/docs/changelog/itb-0.0.8#recommended-actions" class="hash-link" aria-label="Direct link to Recommended Actions" title="Direct link to Recommended Actions" translate="no">​</a></h3>
+<ol>
+<li class=""><strong>Backup your current workspace:</strong> Export any critical models before upgrading</li>
+<li class=""><strong>Clear browser cache:</strong> Some CSS and layout changes may require cache refresh</li>
+<li class=""><strong>Test large models:</strong> If working with models exceeding 50 entities, test the new performance improvements</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="compatibility">Compatibility<a href="https://itb.banian.ch/docs/changelog/itb-0.0.8#compatibility" class="hash-link" aria-label="Direct link to Compatibility" title="Direct link to Compatibility" translate="no">​</a></h3>
+<ul>
+<li class="">✅ Fully backward compatible with existing models</li>
+<li class="">✅ Storage layout unchanged</li>
+<li class="">✅ API format unchanged</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-thank-you">🙏 Thank You<a href="https://itb.banian.ch/docs/changelog/itb-0.0.8#-thank-you" class="hash-link" aria-label="Direct link to 🙏 Thank You" title="Direct link to 🙏 Thank You" translate="no">​</a></h2>
+<p>Thank you to all contributors and users who shared feedback and tested pre-release versions. That input helped refine this release.</p>
+<hr>
+<p><em>ITB 0.0.8 — March 20, 2026</em></p>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ITB 0.0.7]]></title>
         <id>https://itb.banian.ch/docs/changelog/itb-0.0.7</id>
@@ -151,7 +221,7 @@ Your <code>/etc/hosts</code> file should include (already configured if using pr
 <p><strong>Then restart with the existing data:</strong></p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">docker compose up -d</span><br></span></code></pre></div></div>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="common-issues--solutions">Common Issues &amp; Solutions<a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#common-issues--solutions" class="hash-link" aria-label="Direct link to Common Issues &amp; Solutions" title="Direct link to Common Issues &amp; Solutions" translate="no">​</a></h4>
-<table><thead><tr><th>Issue</th><th>Solution</th></tr></thead><tbody><tr><td><strong>Traefik routes not working</strong></td><td>Ensure <code>/etc/hosts</code> has <code>127.0.0.1 itb.localhost api.itb.localhost</code> entries</td></tr><tr><td><strong>Port already in use</strong></td><td>Run <code>docker ps</code> to check conflicts and stop conflicting containers</td></tr><tr><td><strong>Documentation not loading</strong></td><td>Verify docs container is running: <code>docker ps | grep docs</code></td></tr><tr><td><strong>API not responding</strong></td><td>Check logs: <code>docker compose logs api</code></td></tr><tr><td><strong>Can't access PocketBase UI</strong></td><td>Default URL is <code>http://localhost:8090/_</code> (note: uses localhost, not traefik hostname)</td></tr></tbody></table>
+<table><thead><tr><th>Issue</th><th>Solution</th></tr></thead><tbody><tr><td><strong>Traefik routes not working</strong></td><td>Ensure <code>/etc/hosts</code> has <code>127.0.0.1 itb.localhost api.itb.localhost</code> entries</td></tr><tr><td><strong>Port already in use</strong></td><td>Run <code>docker ps</code> to check conflicts and stop conflicting containers</td></tr><tr><td><strong>Documentation not loading</strong></td><td>Verify docs container is running: <code>docker ps | grep docs</code></td></tr><tr><td><strong>API not responding</strong></td><td>Check logs: <code>docker compose logs api</code></td></tr><tr><td><strong>Can't access PocketBase UI</strong></td><td>Default URL is <code>http://itb.localhost/_</code></td></tr></tbody></table>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="full-reset-last-resort">Full Reset (Last Resort)<a href="https://itb.banian.ch/docs/changelog/itb-0.0.7#full-reset-last-resort" class="hash-link" aria-label="Direct link to Full Reset (Last Resort)" title="Direct link to Full Reset (Last Resort)" translate="no">​</a></h4>
 <p>If issues persist, perform a complete reset:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># Stop everything</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">docker compose down</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Remove all ITB-related containers</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">docker ps -a | grep itb | awk '{print $1}' | xargs docker rm -f</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Remove volume</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">docker volume rm itb_pb_data</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Clean up any dangling images (optional)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">docker image prune -a</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Start fresh</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">docker compose up -d</span><br></span></code></pre></div></div>
