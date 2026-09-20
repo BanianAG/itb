@@ -1,43 +1,38 @@
+# Traefik's routing rules.
+#
+# After editing this file: `docker compose restart itb-proxy`.
+#
+# The user documentation has no route here -- the API serves it at /user-docs.
+
 http:
   routers:
-    itb-frontend:
-      rule: "Host(`itb.localhost`)"
-      entryPoints:
-        - web
-      service: itb-frontend
-
     itb-api:
-      rule: "Host(`api.itb.localhost`)"
+      rule: "Host(`api.itb.localhost`) || (Host(`localhost`) && PathPrefix(`/itb-api`))"
       entryPoints:
         - web
       service: itb-api
+      middlewares:
+        - itb-api-strip
 
-    itb-docs:
-      rule: "Host(`itb.localhost`) && PathPrefix(`/docs`)"
+    itb-client:
+      rule: "Host(`itb.localhost`)"
       entryPoints:
         - web
-      middlewares:
-        - docs-strip
-      service: itb-docs
+      service: itb-client
 
   middlewares:
-    docs-strip:
+    itb-api-strip:
       stripPrefix:
         prefixes:
-          - "/docs"
+          - "/itb-api"
 
   services:
-    itb-frontend:
-      loadBalancer:
-        servers:
-          - url: "http://itb-frontend"
-
     itb-api:
       loadBalancer:
         servers:
           - url: "http://itb-api:8000"
 
-    itb-docs:
+    itb-client:
       loadBalancer:
         servers:
-          - url: "http://itb-docs"
+          - url: "http://itb-client:8080"

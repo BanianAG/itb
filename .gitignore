@@ -1,8 +1,20 @@
+# Your configuration — holds the session key and the credential key.
+# .env.bak.* is what itb.sh --reconfigure leaves behind before rewriting it.
 .env
-pb_data/*
-output/**/*.sql
-output/**/*.json
-output/templates/*
-**/__pycache__/
+.env.bak.*
 
-!.gitkeep
+# Your licence file. It identifies your organisation, so it does not belong in a
+# repository, not even a fork of this one.
+license.json
+*.license.json
+
+# Everything the deployment keeps: your model, the generated artefacts, the packs
+# you added. Yours, not this repository's.
+data/
+
+# Left over from earlier versions of this stack, which wrote generated output and
+# exported models into the project folder. Kept as a rule so a working copy that
+# still has them cannot commit them by accident.
+output/
+pb_data/
+**/__pycache__/

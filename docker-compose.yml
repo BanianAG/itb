@@ -1,49 +1,71 @@
+# ITB — three services behind a reverse proxy.
+#
+#   cp .env.example .env      # fill in what it marks as required
+#   docker compose up -d
+#
+# Two things that look like something else when they go wrong:
+#
+#   1. The API does not start without a licence at ./license.json.
+#   2. ./data must be writable by uid 65532 — see README.md, one command, once.
+#
+# Everything the deployment keeps lives in ./data, so it is visible and
+# backup-able from the host.
+
 services:
-  traefik:
-    image: ${REGISTRY_DHI:-dhi.io}/traefik:3.6
+  itb-proxy:
+    image: ${ITB_PROXY_IMAGE:-traefik:3.7.13}
     ports:
-      - ${PORT:-80}:${PORT:-80}
-      - "8080:8080"
+      - ${ITB_HTTP_PORT:-80}:${ITB_HTTP_PORT:-80}
+      - ${ITB_DASHBOARD_PORT:-8080}:8080
     command:
       - "--api.insecure=true"
       - "--providers.file.filename=/etc/traefik/dynamic.yml"
       - "--providers.file.watch=true"
-      - --entrypoints.web.address=:${PORT:-80}
+      - "--entrypoints.web.address=:${ITB_HTTP_PORT:-80}"
     volumes:
-      - ./dynamic.yml:/etc/traefik/dynamic.yml
-
-  itb-frontend:
-    image: ${REGISTRY_BANIAN:-banianch}/itb:${WEBAPP_TAG:-latest}
-    environment:
-      - API_URL=${API_URL:-http://api.itb.localhost}
-      - API_PORT=${PORT:-}
-      - WEBAPP_URL=${WEBAPP_URL:-http://itb.localhost}
-      - WEBAPP_PORT=${PORT:-}
-    volumes:
-      - ./output/frontend:/app/data
-      - pb_data:/app/pb/pb_data
+      - ./dynamic.yml:/etc/traefik/dynamic.yml:ro
+    restart: unless-stopped
 
   itb-api:
-    image: ${REGISTRY_BANIAN:-banianch}/itb-api:${API_TAG:-latest}
-    command: uvicorn main:app --host 0.0.0.0 --port 8000 --proxy-headers --forwarded-allow-ips=* --reload --reload-dir /app --log-level debug
+    image: ${ITB_REGISTRY:-banianch}/${ITB_API_IMAGE:-itb-api}:${ITB_API_TAG:?set ITB_API_TAG in .env — see .env.example}
     volumes:
-      - ./output:/app/output
-      - ./api/template_engine:/app/packages/template_engine
+      # The licence as a single FILE, never a directory mount.
+      - type: bind
+        source: ${ITB_LICENSE_FILE:-./license.json}
+        target: /etc/itb/license.json
+        read_only: true
+        bind:
+          create_host_path: false
+      # Your model, the generated artefacts and any packs you add:
+      #
+      #   ./data/users/<id>/model/        ./data/marketplace/company/
+      #   ./data/users/<id>/output/       ./data/marketplace/community/
+      #
+      # A pack added here is picked up without a restart. `<id>` is derived from
+      # the account name, so it is stable.
+      #
+      # Must belong to uid 65532.
+      - type: bind
+        source: ${ITB_DATA_DIR:-./data}
+        target: /data
+        bind:
+          create_host_path: false
     environment:
-      - WEBAPP_URL=${WEBAPP_URL:-http://itb.localhost}
-      - WEBAPP_PORT=${PORT:-}
-      - API_JSON_OUTPUT_PATH=${API_JSON_OUTPUT_PATH:-output/json}
-      - API_JSON_FILENAME=${API_JSON_FILENAME:-data_modeler_structure.json}
-      - API_TEMPLATE_OUTPUT_PATH=${API_TEMPLATE_OUTPUT_PATH:-output/templates}
+      # Left: what the application reads. Right: what you set in .env.
+      BANIAN_ITB_AUTH_MODE: ${ITB_AUTH_MODE:-local}
+      BANIAN_ITB_AUTH_USERS: ${ITB_AUTH_USERS:?set ITB_AUTH_USERS in .env — see .env.example}
+      BANIAN_ITB_JWT_SECRET: ${ITB_JWT_SECRET:-}
+      BANIAN_ITB_CORS_ALLOW_ORIGINS: ${ITB_CORS_ALLOW_ORIGINS:-}
+      BANIAN_ITB_CREDENTIAL_ENCRYPTION_KEY: ${ITB_CREDENTIAL_KEY:-}
+    restart: unless-stopped
 
-  itb-docs:
-    image: ${REGISTRY_DHI:-dhi.io}/busybox:1.37.0
-    command: httpd -f -p 80 -h /www
-    volumes:
-      - ./docs:/www:ro
-
-volumes: 
-  pb_data:
+  itb-client:
+    image: ${ITB_REGISTRY:-banianch}/${ITB_CLIENT_IMAGE:-itb-client}:${ITB_CLIENT_TAG:?set ITB_CLIENT_TAG in .env — see .env.example}
+    environment:
+      # Where the BROWSER reaches the API: the URL you type, port included.
+      - API_URL=${ITB_API_URL:-http://api.itb.localhost}
+      - API_PORT=${ITB_HTTP_PORT:-80}
+    restart: unless-stopped
 
 networks:
   default:

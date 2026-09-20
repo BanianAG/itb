@@ -1,5 +1,0 @@
-{=- set entity = entities | selectattr("id", "==", id) | first -=}
-{=- raw -=}{# automatically generated #}{=- endraw =}
-{{ config(materialized='view') }}
- 
-{@ (entity.custom_properties | selectattr("key","equalto","custom_sql") | first | default({'value': 'missing custom sql'}) ).value @}
